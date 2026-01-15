@@ -1,2 +1,0 @@
-# BSP
-dev env
