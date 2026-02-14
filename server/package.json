@@ -1,19 +1,26 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This project was bootstrapped with Fastify-CLI.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "dev": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test test/**/*.test.js",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.29.2",
   "dependencies": {
-    "@fastify/cors": "^11.2.0",
+    "@fastify/autoload": "^6.0.0",
+    "@fastify/helmet": "^13.0.2",
+    "@fastify/sensible": "^6.0.0",
     "@fastify/static": "^9.0.0",
-    "fastify": "^5.7.4"
+    "fastify": "^5.0.0",
+    "fastify-cli": "^7.4.1",
+    "fastify-plugin": "^5.0.0"
   }
 }
